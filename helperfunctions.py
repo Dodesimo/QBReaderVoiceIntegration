@@ -1,8 +1,6 @@
 import qbreader as qb
 import pyttsx3 as pyt
 
-def configureEngine(engine):
-    engine.
 
 def getQuestionFromAL(answerline):
     questionInfo = qb.query(questionType="tossup", searchType="answer", queryString=answerline)

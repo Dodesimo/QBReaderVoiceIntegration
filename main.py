@@ -1,6 +1,16 @@
 import helperfunctions as hf
 import pyttsx3 as pyt
 
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
 def main():
     engine = pyt.init()
     tossups = hf.getQuestionFromAL("India")
@@ -8,4 +18,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
